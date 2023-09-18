@@ -94,8 +94,6 @@ int print_address(va_list ptr, params_t *params);
 
 /* simple_printers.c */
 int print_from_to(char *start, char *stop, char *except);
- int print_rev(va_list ptr, params_t *params)
+int print_rev(va_list ptr, params_t *params)
 
 #endif
-
-
