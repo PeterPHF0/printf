@@ -57,8 +57,8 @@ unsigned int l_modifier : 1;
  */
 typedef struct specifier
 {
-	char *specifier;
-	int (*fun)(va_list, params_t *);
+char *specifier;
+int (*fun)(va_list, params_t *);
 } specifier_t;
 
 /* _put.c */
@@ -73,3 +73,13 @@ int print_char(va_list ptr, params_t *params);
 int print_string(va_list ptr, params_t *params);
 int print_percent(va_list ptr, params_t *params);
 int print_int(va_list ptr, params_t *params);
+
+/* specifier.c*/
+int (*get specifier(char *s))(va_list ap, params_t *params);
+int get_print_func(char *s, va_list ap, params_t *params);
+int get_flag(char *s, params_t *params);
+int get_modifier(char *s, params_t *params);
+char *get_width(char *s, params_t *params, va_list ap);
+
+
+
