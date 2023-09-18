@@ -5,18 +5,19 @@
  * @params: the parameters struct
  * Return: number chars printed
  */
-int print_char (va list ptr, params_t *params)
-
+int print_char(va list ptr, params_t *params)
+{
 char pad_char = ' ';
-unsigned int pad= 1, sum = 0, ch = va_arg(ptr, int);
+unsigned int pad = 1, sum = 0, ch = va_arg(ptr, int);
 
 if (params->minus_flag)
-sum+_putchar (ch);
+sum += _putchar(ch);
 while (pad++ < params->width)
 sum += _putchar(pad_char);
 if (!params->minus_flag)
-sum += putchar (ch);
+sum += _putchar (ch);
 return (sum);
+}
 
 /**
  * print_string - prints string
@@ -24,11 +25,12 @@ return (sum);
  * @params: the parameters struct
  * Return: number chars printed
 */
-int print_string (va_list ptr, params_t *params)
-char *str = va_arg (ap, char *), pad_char = ' ';
+int print_string(va_list ptr, params_t *params)
+{
+char *str = va_arg(ap, char *), pad_char = ' ';
 unsigned int pad = 0, sum = 0, i = 0, j;
-(void) params;
-switch ((int) (!str))
+(void)params;
+switch ((int)(!str))
 case l:
 str = NULL_STRING;
 j = pad = _strlen(str);
@@ -37,21 +39,23 @@ j = pad = params->precision;
 if (params->minus_flag)
 {
 if (params->precision != UINT_MAX)
-for (i=0; i < pad; i++)
+for (i = 0; i < pad; i++)
 Sum += _putchar (*str++);
 else
 sum += _puts(str);
 }
-while (j++<params->width)
+while (j++ < params->width)
 sum += _putchar (pad_char);
 if (!params->minus_flag)
 {
 if (params->precision != UINT_MAX)
 for (i = 0; i < pad; i++)
-sum += _putchar (*str++);
+sum += _putchar(*str++);
 else
-sum += puts (str);
+sum += _puts(str);
 return (sum);
+}
+}
 
 /**
  * print_percent - prints
@@ -63,7 +67,7 @@ int print_percent(va_list ptr, params_t *params)
 {
 (void)ptr;
 (void)params;
-return (_putchar('%));
+return (_putchar('%'));
 }
 
 /**
@@ -75,14 +79,12 @@ return (_putchar('%));
 
 int print_int (va_list ptr, params_t *params)
 {
-long x;
+long l;
 if (params->1_modifier)
-x = va_arg(ptr, long);
+l = va_arg(ptr, long);
 else if (params->h_modifier)
-x = (short int)va_arg (ptr, int);
+l = (short int)va_arg(ptr, int);
 else
-x = (int) va_arg (ap, int);
-return (print_number (convert (1, 10, 0, params), params));
+l = (int)va_arg(ptr, int);
+return (print_number(convert(1, 10, 0, params), params));
 }
-
-
