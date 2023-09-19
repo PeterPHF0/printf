@@ -1,13 +1,14 @@
 #include "main.h"
 
 /**
-* convert - converter function, a clone of itoa
-* @num: pumber
-* @base: base
-* @flags: argument flags
-* @params: paramater struct
-* Return: string
-*/
+ * convert - converter function, a clone of itoa
+ * @num: pumber
+ * @base: base
+ * @flags: argument flags
+ * @params: paramater struct
+ * Return: string
+ */
+
 char *convert(long int num, int base, int flags, params_t *params)
 {
 static char *array;
@@ -15,9 +16,9 @@ static char buffer[50];
 char sign = 0;
 char *ptr;
 unsigned long n = num;
-(void) params;
+(void)params;
 
-if (!(flags &CONVERT_UNSIGNED) && num < 0)
+if (!(flags & CONVERT_UNSIGNED) && num < 0)
 {
 n = -num;
 sign = '-';
@@ -45,14 +46,14 @@ return (ptr);
 int print_unsigned(va_list ptr, params_t *params)
 {
 unsigned long l;
-if (params-> modifier)
+if (params->l_modifier)
 l = (unsigned long)va_arg(ptr, unsigned long);
-else if (params->h modifier)
-l = (unsigned short int)va_arg(ptr, unsigned int);
+else if (params->h_modifier)
+	l = (unsigned short int)va_arg(ptr, unsigned int);
 else
-l = (unsigned int)va_arg(ptr, unsigned int);
-params->unsign = l;
-return (print_number(convert(1, 10, CONVERT_UNSIGNED, params), params));
+	l = (unsigned int)va_arg(ptr, unsigned int);
+params->unsign = 1;
+return (print_number(convert(l, 10, CONVERT_UNSIGNED, params), params));
 }
 
 /**
@@ -65,7 +66,7 @@ return (print_number(convert(1, 10, CONVERT_UNSIGNED, params), params));
 int print_address(va_list ptr, params_t *params)
 {
 unsigned long int n = va_arg(ptr, unsigned long int);
-char *str:
+char *str;
 
 if (!n)
 
@@ -76,4 +77,3 @@ str = convert(n, 16, CONVERT_UNSIGNED | CONVERT_LOWERCASE, params);
 *--str = '0';
 return (print_number(str, params));
 }
-
