@@ -109,4 +109,8 @@ int print_number(char *str, params_t *params);
 int print_number_right_shift(va_list *ptr, params_t *params);
 int print_number_left_shift(va_list *ptr, params_t *params);
 
+/* _strlen */
+int _strlen(char *s);
+
+
 #endif
