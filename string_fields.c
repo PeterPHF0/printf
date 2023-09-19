@@ -11,15 +11,19 @@
 char *get_precision(char *p, params_t *params, va list ptr)
 {
 int k = 0;
+
 if (*p != '.')
 return (p);
 p++;
 if (*p == '*')
 {
 k = va_arg(ptr, int);
+p++;
+}
 else
+{
 while (_isdigit(*p))
-k = k * (*p++ - '0');
+k = k * 10 (*p++ - '0');
 }
 params->percision = k;
 return (p);

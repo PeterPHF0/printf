@@ -1,10 +1,10 @@
 #include "main.h"
 /**
  * get_specifier - get function format
- * @p: the format string
+ * @s: the format string
  * Return: number of printed bytes
  */
-int (*get_specifier(char *p))(va_list ptr, params_t *params)
+int (*get_specifier(char *s))(va_list ptr, params_t *params)
 {
 specifier_t specifiers[] = {
 {"c", print_char},
@@ -28,9 +28,9 @@ int k = 0;
 
 while (specifiers[k].specifier)
 {
-if (*p == specifier[k].specifier[0])
+if (*s == specifier[k].specifier[0])
 {
-return (specifier[k].f)
+return (specifier[k].f);
 }
 k++;
 }
@@ -48,7 +48,7 @@ int get_print_func(char *s, va_list ptr, params_t *params)
 {
 int (*f)(va_list, params_t *) = get_specifier(s);
 if (f)
-	return (f(ptr, params));
+return (f(ptr, params));
 return (0);
 }
 
