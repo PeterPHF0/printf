@@ -4,11 +4,19 @@
  * print_unsigned - Printsjkkjnjk  an unsigned number
  * @types: List a of ahbjhrgumentnlk s
  * @buffer: Buffer handle printf
+<<<<<<< HEAD
  * @flags:  Calculate flag
  * width: calc width.
  * @precision: Precision knl specification
  * @size: specifier size.
  * Return:  chars printed.
+=======
+ * @flags:  Calculates active flagbjkj mll ll s
+ * @width: get widthn lk
+ * @precision: Precision knl specification
+ * @size: Size specifier klkm
+ * Return:  chars prinjklvbdf ted.
+>>>>>>> 1b5a92437ebf5ab065e6a1f612f42d492a77fce7
  */
 int print_unsigned(va_list types, char buffer[],
 	int flags, int width, int precision, int size)
@@ -79,7 +87,7 @@ int print_octal(va_list types, char buffer[],
 /**
  * print_hexadecimal - an unsignefwed number in hexadecimal notation
  * @types: Lista gumentseefwv weve
- * @buffer: Bufr array to handle printvwev 
+ * @buffer: Bufr array to handle printvwev
  * @flags:  Cculates active flfwev ewweags
  * @width: get widthdvsdv dvefwe
  * @precision: Pcision ssdvsdpecification
@@ -101,7 +109,7 @@ int print_hexadecimal(va_list types, char buffer[],
  * @width: get width fg r grr fg fddf
  * @precision: Precision sgvb fd pecif  rgregication
  * @size: Size specifier  fdfogrm.f
- * Return: Number of chars printed d;lbm;l  reg rgeger rg
+ * Return: Number of chars printed dlbml  reg rgeger rg
  */
 int print_hexa_upper(va_list types, char buffer[],
 	int flags, int width, int precision, int size)
@@ -115,12 +123,12 @@ int print_hexa_upper(va_list types, char buffer[],
  * @types: Lista of argumenbe m reger gts
  * @map_to: Array of values the number to
  * @buffer: Bubdfb erg ger g re ergffer array to handle print
- * @flags:  Calculates active f kjngb kl oj p;llags
- * @flag_ch: Calculates active 
+ * @flags:  Calculates active f kjngb kl oj pllags
+ * @flag_ch: Calculates active
  * @width: get width few ff
  * @precision: Precision ification mvldfmv
  * @size: Size specifier mklgrvmwrl
- * @size: Size specification fvl ;lmvrwvmwepf 
+ * @size: Size specification fvl lmvrwvmwepf
  * Return: Number of chars printed md;vlmwefl
  */
 int print_hexa(va_list types, char map_to[], char buffer[],

@@ -1,21 +1,20 @@
 #include "main.h"
 
 /**
- * print_pointer - Prints  jpcojm  koemrfbv k[pevke the value of a pointer variable
- * @types: List a of arguments m;vlm;elr 
- * ,f'e;rm l;kvwl
+ * print_pointer - Prints f a pointer variable
+ * @types: List a of arguments mvlmelr f'erm lkvwl
  * @buffer: array to handle print
  * @flags:  vdfvsd Calculates active flags
  * @width: get widt jknjk knmlkh
- * @precision: Precision 
+ * @precision: Precision
  * @size: Size sp jmldkv fier
- * Return: Number of charjoibn rmg;lore s printed.
+ * Return: Number of charjoibn rmglore s printed.
  */
 int print_pointer(va_list types, char buffer[],
 	int flags, int width, int precision, int size)
 {
 	char extra_c = 0, padd = ' ';
-	int ind = BUFF_SIZE - 2, length = 2, padd_start = 1; /* length=2, for '0x' */
+	int ind = BUFF_SIZE - 2, length = 2, padd_start = 1;
 	unsigned long num_addrs;
 	char map_to[] = "0123456789abcdef";
 	void *addrs = va_arg(types, void *);
@@ -53,14 +52,14 @@ int print_pointer(va_list types, char buffer[],
 
 
 /**
- * print_non_printable - Prinvf  m v;m sm ,sk;lb ts ascii codes in hexa of non printable chars
+ * print_non_printable - Prin odes in hexa of non printable chars
  * @types: argument
  * @buffer: Bufn k klm mv m  verv fer array to handle print
  * @flags:  Calculates active flags kmkl ol lkbef
- * @width: get 
- * @precision: Precision specific m ;lrmg;l ovb epm ation
- * @size: Size specifier olmb;elr
- * Return: Number ohjvb kgmn ; mbeb lmm mf chars printed
+ * @width: get
+ * @precision: Precision specific m lrmgl ovb epm ation
+ * @size: Size specifier olmbelr
+ * Return: Number ohjvb kgmn mbeb lmm mf chars printed
  */
 int print_non_printable(va_list types, char buffer[],
 	int flags, int width, int precision, int size)
@@ -93,13 +92,13 @@ int print_non_printable(va_list types, char buffer[],
 
 
 /**
- * print_reverse - Prints reverse string mm mdvmwe;rlvw.
+ * print_reverse - Prints reverse string mm mdvmwerlvw.
  * @types: Lista of arguments nowemwemf emfwefm
- * @buffer: Buffer array to handle print movwemvw 
+ * @buffer: Buffer array to handle print movwemvw
  * @flags:  Calculates active wovmweokf flags
  * @width: get width omvemrwfg
  * @precision: Preci jln klm sion specification
- * @size: Sizev ,mewldm
+ * @size: Sizev mewldm
  * Return: Numbers of chars printed
  */
 
@@ -137,13 +136,13 @@ int print_reverse(va_list types, char buffer[],
 /**
  * print_rot13string - Prin in rot13.
  * @types: Lista of a fwerrguments
- * @buffer: Buffer array t dvm;lm; o handle print
+ * @buffer: Buffer array t dvmlm o handle print
  * @flags:  Calculates acti
  * ve flags
  * @width: get width m wefm
  * @precision: Precision specification
  * @size: Size specifvsdier
- * Return: Numbers of ch ve evl; /ars printed
+ * Return: Numbers of ch ve evlars printed
  */
 int print_rot13string(va_list types, char buffer[],
 	int flags, int width, int precision, int size)

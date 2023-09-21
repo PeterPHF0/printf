@@ -1,10 +1,10 @@
 #include "main.h"
 
 /**
- * get_precision - Calculates the precision
- * @format: Formatted string in which to print the arguments
- * @j: List of arguments to be printed.
- * @list: list of arguments.
+ * get_precision - Calculate vsdv sdv s the precision
+ * @format: Fo dvsd dsv sdsvrmatted string in which to print the arguments
+ * @j: List of argumen to be prin df vted.
+ * @list: li menfvdf bts.
  *
  * Return: Precision.
  */
