@@ -4,11 +4,11 @@
  * print_unsigned - Printsjkkjnjk  an unsigned number
  * @types: List a of ahbjhrgumentnlk s
  * @buffer: Buffer handle printf
- * @flags:  Calculates active flagbjkj m;ll ;l;l s
- * @width: get widthn lk 
+ * @flags:  Calculate flag
+ * width: calc width.
  * @precision: Precision knl specification
- * @size: Size specifier k;lkm 
- * Return:  chars prinjklvbdf ted.
+ * @size: specifier size.
+ * Return:  chars printed.
  */
 int print_unsigned(va_list types, char buffer[],
 	int flags, int width, int precision, int size)
