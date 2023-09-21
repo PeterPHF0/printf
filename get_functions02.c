@@ -4,10 +4,10 @@
  * print_unsigned - Printsjkkjnjk  an unsigned number
  * @types: List a of ahbjhrgumentnlk s
  * @buffer: Buffer handle printf
- * @flags:  Calculates active flagbjkj m;ll ;l;l s
- * @width: get widthn lk 
+ * @flags:  Calculates active flagbjkj mll ll s
+ * @width: get widthn lk
  * @precision: Precision knl specification
- * @size: Size specifier k;lkm 
+ * @size: Size specifier klkm
  * Return:  chars prinjklvbdf ted.
  */
 int print_unsigned(va_list types, char buffer[],
@@ -79,7 +79,7 @@ int print_octal(va_list types, char buffer[],
 /**
  * print_hexadecimal - an unsignefwed number in hexadecimal notation
  * @types: Lista gumentseefwv weve
- * @buffer: Bufr array to handle printvwev 
+ * @buffer: Bufr array to handle printvwev
  * @flags:  Cculates active flfwev ewweags
  * @width: get widthdvsdv dvefwe
  * @precision: Pcision ssdvsdpecification
@@ -101,7 +101,7 @@ int print_hexadecimal(va_list types, char buffer[],
  * @width: get width fg r grr fg fddf
  * @precision: Precision sgvb fd pecif  rgregication
  * @size: Size specifier  fdfogrm.f
- * Return: Number of chars printed d;lbm;l  reg rgeger rg
+ * Return: Number of chars printed dlbml  reg rgeger rg
  */
 int print_hexa_upper(va_list types, char buffer[],
 	int flags, int width, int precision, int size)
@@ -115,12 +115,12 @@ int print_hexa_upper(va_list types, char buffer[],
  * @types: Lista of argumenbe m reger gts
  * @map_to: Array of values the number to
  * @buffer: Bubdfb erg ger g re ergffer array to handle print
- * @flags:  Calculates active f kjngb kl oj p;llags
- * @flag_ch: Calculates active 
+ * @flags:  Calculates active f kjngb kl oj pllags
+ * @flag_ch: Calculates active
  * @width: get width few ff
  * @precision: Precision ification mvldfmv
  * @size: Size specifier mklgrvmwrl
- * @size: Size specification fvl ;lmvrwvmwepf 
+ * @size: Size specification fvl lmvrwvmwepf
  * Return: Number of chars printed md;vlmwefl
  */
 int print_hexa(va_list types, char map_to[], char buffer[],
