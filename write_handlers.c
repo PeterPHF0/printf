@@ -97,9 +97,9 @@ int write_num(int ind, char buffer[],
 	int i, padd_start = 1;
 
 	if (prec == 0 && ind == BUFF_SIZE - 2 && buffer[ind] == '0' && width == 0)
-		return (0); 
+		return (0);
 	if (prec == 0 && ind == BUFF_SIZE - 2 && buffer[ind] == '0')
-		buffer[ind] = padd = ' '; 
+		buffer[ind] = padd = ' ';
 	if (prec > 0 && prec < length)
 		padd = ' ';
 	while (prec > length)
@@ -154,7 +154,6 @@ int write_unsgnd(int is_negative, int ind,
 	char buffer[],
 	int flags, int width, int precision, int size)
 {
-	
 	int length = BUFF_SIZE - ind - 1, i = 0;
 	char padd = ' ';
 
@@ -206,7 +205,6 @@ int write_unsgnd(int is_negative, int ind,
  * @padd: Cr re sdv dsvng the padding
  * @extra_c: Char svsdv senting extra char
  * @padd_start: Insdv asdvdsvv  which padding should start
- *
  * Return: Number of written chars.
  */
 int write_pointer(char buffer[], int ind, int length,
