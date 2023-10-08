@@ -1,44 +1,35 @@
 #include "main.h"
 
 /**
- * _putchar - print char ch to stdout library.
+ * _put - print string
  *
- * @ch: the printed character.
+ * @str: format string.
+ * @ls: argument list.
  *
- * Return: `1` indicates ch was successfully written to stdout.
+ * Return: lenth of string
  */
 
-int _putchar(int ch)
+void _put(const char *str, va_list ls)
 {
-	static int k;
-	static char buf[OUTPUT_BUF_SIZE];
+	int i = 0;
 
-	if (k >= OUTPUT_BUF_SIZE || ch == BUF_FLUSH)
+	while (str[i] != '\0')
 	{
-		write(1, buf, k);
-		k = 0;
+		if (str[i] == '%')
+		{
+			if (str[i + 1] == '%')
+			{
+				char c = '%';
+
+				write(1, &c, 1);
+				i += 2;
+				continue;
+			}
+			ls = get_format(str, i, ls);
+			i += 2;
+			continue;
+		}
+		write(1, &str[i], 1);
+		i++;
 	}
-	if (ch != BUF_FLUSH)
-	{
-		buf[k] = ch;
-		k = k + 1;
-	}
-	return (1);
-}
-
-/**
- * _puts - prints a string with newline.
- *
- * @str: a string to print.
- *
- * Return: the length of the string that was printed.
- */
-
-int _puts(char *str)
-{
-	char *ptr = str;
-
-	while (*str)
-		_putchar(*str++);
-	return (str - ptr);
 }
