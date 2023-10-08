@@ -1,5 +1,5 @@
-#ifndef _PRINTF_H
-#define _PRINTF_H
+#ifndef MAIN.H
+#define MAIN.H
 
 #include <stdio.h>
 #include <unistd.h>
