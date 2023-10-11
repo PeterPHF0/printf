@@ -7,7 +7,7 @@
  * Return: ls after printing the value.
  */
 
-char *print_int(va_list ls)
+int *print_int(va_list ls)
 {
 	int num = va_arg(ls, int);
 	char *s = intToString(num);
