@@ -7,7 +7,7 @@
  * Return: lenth of string.
  */
 
-va_list binary(va_list ls)
+int *binary(va_list ls)
 {
 	int num = va_arg(ls, int);
 	int *arr = generate_array(num);
