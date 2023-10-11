@@ -7,7 +7,7 @@
  * Return: ls after printing the value.
  */
 
-va_list print_char(va_list ls)
+char *print_char(va_list ls)
 {
 	char c = va_arg(ls, int);
 
