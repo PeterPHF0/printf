@@ -10,7 +10,7 @@
  * Return: lenth of string.
  */
 
-va_list get_format(const char *str, int i, va_list ls)
+void *get_format(const char *str, int i, va_list ls)
 {
 	int letter_i = 0;
 	char letter[] = {'c', 's', 'd', 'i', 'b'};
