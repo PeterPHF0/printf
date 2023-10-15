@@ -2,12 +2,14 @@
 
 /**
  * *print_int - a function to convert decimal number to binary.
+ * @str: format string.
+ * @i: index.
  * @ls: argument list.
  *
  * Return: ls after printing the value.
  */
 
-va_list print_int(va_list ls)
+void  print_int(const char *str, int i, va_list ls)
 {
 	int num = va_arg(ls, int);
 	char *s = intToString(num);
@@ -17,5 +19,5 @@ va_list print_int(va_list ls)
 		write(1, s, 1);
 		s++;
 	}
-return (ls);
+	_put(&str[i], ls);
 }

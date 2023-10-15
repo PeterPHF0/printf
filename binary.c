@@ -2,12 +2,14 @@
 
 /**
  * binary - a function to convert decimal number to binary.
+ * @str: format string.
+ * @i: index.
  * @ls: argument list.
  *
  * Return: lenth of string.
  */
 
-va_list binary(va_list ls)
+void binary(const char *str, int i, va_list ls)
 {
 	int num = va_arg(ls, int);
 	int *arr = generate_array(num);
@@ -31,7 +33,7 @@ va_list binary(va_list ls)
 		i++;
 		len--;
 	}
-	return (ls);
+	_put(&str[j], ls);
 }
 
 /**

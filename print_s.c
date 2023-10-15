@@ -2,12 +2,13 @@
 
 /**
  * *print_s - a function to print string.
- * @ls: argument list.
- *
+ * @str: argument list.
+ * @i: index.
+ * @ls: ksa.
  * Return: ls after printing the value.
  */
 
-va_list print_s(va_list ls)
+void print_s(const char *str, int i, va_list ls)
 {
 	char *s = va_arg(ls, char *);
 
@@ -16,5 +17,5 @@ va_list print_s(va_list ls)
 		write(1, s, 1);
 		s++;
 	}
-return (ls);
+	_put(&str[i], ls);
 }
