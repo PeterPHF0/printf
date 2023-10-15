@@ -8,11 +8,7 @@
  * Return: ls after printing the value.
  */
 
-<<<<<<< HEAD
 void print_s(const char *str, int i, va_list ls)
-=======
-char *print_s(va_list ls)
->>>>>>> 4ec2aa4d484ad13cae84f973b08d386cb33dc452
 {
 	char *s = va_arg(ls, char *);
 

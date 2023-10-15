@@ -9,11 +9,7 @@
  * Return: lenth of string.
  */
 
-<<<<<<< HEAD
 void binary(const char *str, int i, va_list ls)
-=======
-int *binary(va_list ls)
->>>>>>> 4ec2aa4d484ad13cae84f973b08d386cb33dc452
 {
 	int num = va_arg(ls, int);
 	int *arr = generate_array(num);

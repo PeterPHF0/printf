@@ -9,11 +9,7 @@
  * Return: ls after printing the value.
  */
 
-<<<<<<< HEAD
 void  print_int(const char *str, int i, va_list ls)
-=======
-int *print_int(va_list ls)
->>>>>>> 4ec2aa4d484ad13cae84f973b08d386cb33dc452
 {
 	int num = va_arg(ls, int);
 	char *s = intToString(num);
