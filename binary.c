@@ -3,13 +3,13 @@
 /**
  * binary - a function to convert decimal number to binary.
  * @str: format string.
- * @i: index.
+ * @j: index.
  * @ls: argument list.
  *
  * Return: lenth of string.
  */
 
-void binary(const char *str, int i, va_list ls)
+void binary(const char *str, int j, va_list ls)
 {
 	int num = va_arg(ls, int);
 	int *arr = generate_array(num);
@@ -48,6 +48,7 @@ int *generate_array(int num)
 	int *arr_num;
 	int i = 2;
 	int n = 4;
+	int j;
 
 	arr_num = malloc(sizeof(int));
 	if (num <= 1)
@@ -62,7 +63,8 @@ int *generate_array(int num)
 	}
 
 	arr_num = realloc(arr_num, i * sizeof(int));
-	for (int j = 1; j <= i; j++)
+
+	for (j = 1; j <= i; j++)
 	{
 		n /= 2;
 		arr_num[j - 1] = n;

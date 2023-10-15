@@ -12,7 +12,7 @@
 
 void get_format(const char *str, int i, va_list ls)
 {
-	int letter_i = 0;
+	unsigned int letter_i = 0;
 	char letter[] = {'c', 's', 'd', 'i', 'b'};
 
 	void (*func[])(const char *, int, va_list) = {

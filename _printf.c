@@ -11,13 +11,10 @@
 int _printf(const char *format, ...)
 {
 	va_list ls;
-
-	va_start(ls, format);
-
 	const char *str;
-
 	int size = 0;
 
+	va_start(ls, format);
 	str = format;
 	while (*str != '\0')
 	{
