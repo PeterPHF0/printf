@@ -11,7 +11,7 @@
 
 void  print_int(const char *str, int i, va_list ls)
 {
-	int num = va_arg(ls, int);
+	long int num = va_arg(ls, int);
 	char *s = intToString(num);
 
 	while (*s != '\0')
