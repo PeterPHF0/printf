@@ -25,7 +25,7 @@ void _put(const char *str, va_list ls)
 				i += 2;
 				continue;
 			}
-			get_format(str, i , ls);
+			get_format(str, i, ls);
 			return;
 		}
 		write(1, &str[i], 1);

@@ -16,7 +16,7 @@ int _printf(const char *format, ...)
 
 	if (format == NULL)
 		return (-1);
-	
+
 	va_start(ls, format);
 	str = format;
 	while (*str != '\0')
@@ -32,6 +32,6 @@ int _printf(const char *format, ...)
 
 	_put(format, ls);
 	va_end(ls);
-	
+
 	return (size);
 }
